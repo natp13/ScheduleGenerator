@@ -1,19 +1,12 @@
 import random
 
-r = [["natural", "dillon"],
-["garber", "eckmanity"],
-["franchise", "kormanation"],
-["grony", "kumarius"],
-["marta", "hanks"],
-["rdirk", "tyler"]]
-
-divisions = [['natural', 'kumarius', 'tyler'],
-['garber', 'dillon', 'grony'],
-['rdirk', 'kormanation', 'marta'],
-['franchise', 'hanks', 'eckmanity']]
+divisions = [['natural', 'hanks', 'tyler'],
+['garber', 'kumarius', 'eckmanity'],
+['rdirk', 'kormanation', 'franchise'],
+['marta', 'dillon', 'grony']]
 
 weeks = 13
-schedule = [r]
+schedule = []
 
 allGames = []
 allTeams = []
@@ -81,9 +74,13 @@ def populateAllTeams():
     global allTeams
     
     allTeams = []
-    for iMatchup in range(0,len(r)):
-        allTeams.append(r[iMatchup][0])
-        allTeams.append(r[iMatchup][1])
+    # for iMatchup in range(0,len(r)):
+    #     allTeams.append(r[iMatchup][0])
+    #     allTeams.append(r[iMatchup][1])
+
+    for division in divisions:
+        for team in division:
+            allTeams.append(team)
         
     for team in allTeams:
         opponentsMap[team] = []
@@ -312,7 +309,7 @@ def generateScheduleForDivisions():
     
     # schedule the division games and the non-division rivalry games
     scheduleDivisionOnlyGames()
-    scheduleRivalryWeekGames()
+    #scheduleRivalryWeekGames()
     
     tries = 0
     while (not scheduleGamesFromList(gamesToSchedule)):
@@ -320,7 +317,7 @@ def generateScheduleForDivisions():
         
         # we're trying again, so schedule the division games and the non-division rivalry games
         scheduleDivisionOnlyGames()
-        scheduleRivalryWeekGames()
+        # scheduleRivalryWeekGames()
         tries = tries + 1
     print("tries:", tries)
     
