@@ -1,0 +1,146 @@
+divisions =[
+['natural', 'marta', 'kormanation'],
+['garber', 'kumarius', 'grony'],
+['rdirk', 'mdirk', 'dillon'],
+['franchise', 'hammerin hanks', 'wayne']]
+
+
+
+1 :
+        mdirk @ grony
+        natural @ franchise
+        wayne @ garber
+        kumarius @ hammerin hanks
+        marta @ rdirk
+        dillon @ kormanation
+
+2 :
+        grony @ hammerin hanks
+        marta @ mdirk
+        dillon @ franchise
+        garber @ natural
+        rdirk @ kormanation
+        wayne @ kumarius
+
+3 :
+        wayne @ grony
+        kormanation @ mdirk
+        dillon @ hammerin hanks
+        franchise @ garber
+        natural @ rdirk
+        kumarius @ marta
+
+4 :
+        marta @ kormanation **
+        grony @ kumarius **
+        dillon @ rdirk **
+        franchise @ wayne **
+        garber @ mdirk
+        hammerin hanks @ natural
+
+5 :
+        kormanation @ natural **
+        kumarius @ garber **
+        rdirk @ mdirk **
+        wayne @ hammerin hanks **
+        grony @ franchise
+        marta @ dillon
+
+6 :
+        natural @ marta **
+        garber @ grony **
+        mdirk @ dillon **
+        hammerin hanks @ franchise **
+        kormanation @ kumarius
+        rdirk @ wayne
+
+7 :
+        mdirk @ franchise
+        dillon @ grony
+        kormanation @ hammerin hanks
+        garber @ marta
+        natural @ wayne
+        kumarius @ rdirk
+
+8 :
+        franchise @ marta
+        rdirk @ hammerin hanks
+        kumarius @ mdirk
+        garber @ kormanation
+        grony @ natural
+        dillon @ wayne
+
+9 :
+        grony @ marta
+        kormanation @ wayne
+        mdirk @ hammerin hanks
+        rdirk @ garber
+        franchise @ kumarius
+        natural @ dillon
+
+10 :
+        wayne @ marta
+        hammerin hanks @ garber
+        rdirk @ grony
+        franchise @ kormanation
+        kumarius @ dillon
+        mdirk @ natural
+
+11 :
+        natural @ kormanation **
+        kumarius @ grony **
+        mdirk @ rdirk **
+        wayne @ franchise **
+        hammerin hanks @ marta
+        garber @ dillon
+
+12 :
+        marta @ natural **
+        garber @ kumarius **
+        dillon @ mdirk **
+        hammerin hanks @ wayne **
+        franchise @ rdirk
+        grony @ kormanation
+
+13 :
+        kormanation @ marta **
+        grony @ garber **
+        rdirk @ dillon **
+        franchise @ hammerin hanks **
+        natural @ kumarius
+        mdirk @ wayne
+
+wayne :  11  -  home: 6 - ['garber', 'kumarius', 'grony', 'franchise', 'hammerin hanks', 'rdirk', 'natural', 'dillon', 'kormanation', 'marta', 'franchise', 'hammerin hanks', 'mdirk']
+
+
+rdirk :  11  -  home: 7 - ['marta', 'kormanation', 'natural', 'dillon', 'mdirk', 'wayne', 'kumarius', 'hammerin hanks', 'garber', 'grony', 'mdirk', 'franchise', 'dillon']
+
+
+natural :  11  -  home: 7 - ['franchise', 'garber', 'rdirk', 'hammerin hanks', 'kormanation', 'marta', 'wayne', 'grony', 'dillon', 'mdirk', 'kormanation', 'marta', 'kumarius']
+
+
+dillon :  11  -  home: 7 - ['kormanation', 'franchise', 'hammerin hanks', 'rdirk', 'marta', 'mdirk', 'grony', 'wayne', 'natural', 'kumarius', 'garber', 'mdirk', 'rdirk']
+
+
+hammerin hanks :  11  -  home: 5 - ['kumarius', 'grony', 'dillon', 'natural', 'wayne', 'franchise', 'kormanation', 'rdirk', 'mdirk', 'garber', 'marta', 'wayne', 'franchise']
+
+
+kormanation :  11  -  home: 6 - ['dillon', 'rdirk', 'mdirk', 'marta', 'natural', 'kumarius', 'hammerin hanks', 'garber', 'wayne', 'franchise', 'natural', 'grony', 'marta']
+
+
+garber :  11  -  home: 7 - ['wayne', 'natural', 'franchise', 'mdirk', 'kumarius', 'grony', 'marta', 'kormanation', 'rdirk', 'hammerin hanks', 'dillon', 'kumarius', 'grony']
+
+
+kumarius :  11  -  home: 7 - ['hammerin hanks', 'wayne', 'marta', 'grony', 'garber', 'kormanation', 'rdirk', 'mdirk', 'franchise', 'dillon', 'grony', 'garber', 'natural']
+
+
+mdirk :  11  -  home: 7 - ['grony', 'marta', 'kormanation', 'garber', 'rdirk', 'dillon', 'franchise', 'kumarius', 'hammerin hanks', 'natural', 'rdirk', 'dillon', 'wayne']
+
+
+franchise :  11  -  home: 7 - ['natural', 'dillon', 'garber', 'wayne', 'grony', 'hammerin hanks', 'mdirk', 'marta', 'kumarius', 'kormanation', 'wayne', 'rdirk', 'hammerin hanks']
+
+
+grony :  11  -  home: 7 - ['mdirk', 'hammerin hanks', 'wayne', 'kumarius', 'franchise', 'garber', 'dillon', 'natural', 'marta', 'rdirk', 'kumarius', 'kormanation', 'garber']
+
+
+marta :  11  -  home: 5 - ['rdirk', 'mdirk', 'kumarius', 'kormanation', 'dillon', 'natural', 'garber', 'franchise', 'grony', 'wayne', 'hammerin hanks', 'natural', 'kormanation']

@@ -1,0 +1,116 @@
+0 :
+        ['natural', 'romophobes']
+        ["arthur's spooners", 'mdirk doin work']
+        ['garber', 'marta bus']
+        ['franchise', 'hammerin hanks']
+        ['gronk smash', 'cincy circle dirks']
+        ['just a teaspoon', 'black levs matter']
+
+1 :
+        ['natural', 'hammerin hanks']
+        ['cincy circle dirks', 'mdirk doin work']
+        ['romophobes', 'gronk smash']
+        ['garber', "arthur's spooners"]
+        ['franchise', 'black levs matter']
+        ['just a teaspoon', 'marta bus']
+
+2 :
+        ['natural', 'garber']
+        ['cincy circle dirks', "arthur's spooners"]
+        ['romophobes', 'mdirk doin work']
+        ['franchise', 'marta bus']
+        ['gronk smash', 'black levs matter']
+        ['just a teaspoon', 'hammerin hanks']
+
+3 :
+        ['natural', 'mdirk doin work']
+        ['cincy circle dirks', 'romophobes']
+        ['garber', 'black levs matter']
+        ['franchise', "arthur's spooners"]
+        ['gronk smash', 'hammerin hanks']
+        ['just a teaspoon', 'marta bus']
+
+4 :
+        ['natural', 'cincy circle dirks']
+        ['romophobes', 'garber']
+        ['franchise', 'gronk smash']
+        ['just a teaspoon', "arthur's spooners"]
+        ['marta bus', 'hammerin hanks']
+        ['black levs matter', 'mdirk doin work']
+
+5 :
+        ['natural', 'marta bus']
+        ['cincy circle dirks', 'hammerin hanks']
+        ['romophobes', 'just a teaspoon']
+        ['garber', 'gronk smash']
+        ['franchise', 'mdirk doin work']
+        ["arthur's spooners", 'black levs matter']
+
+6 :
+        ['natural', 'just a teaspoon']
+        ['cincy circle dirks', 'marta bus']
+        ['romophobes', "arthur's spooners"]
+        ['garber', 'hammerin hanks']
+        ['franchise', 'gronk smash']
+        ['black levs matter', 'mdirk doin work']
+
+7 :
+        ['natural', 'franchise']
+        ['cincy circle dirks', 'just a teaspoon']
+        ['romophobes', 'hammerin hanks']
+        ['garber', 'mdirk doin work']
+        ['gronk smash', "arthur's spooners"]
+        ['marta bus', 'black levs matter']
+
+8 :
+        ['natural', 'black levs matter']
+        ['cincy circle dirks', 'garber']
+        ['romophobes', 'marta bus']
+        ['franchise', 'just a teaspoon']
+        ['gronk smash', 'mdirk doin work']
+        ["arthur's spooners", 'hammerin hanks']
+
+9 :
+        ['natural', "arthur's spooners"]
+        ['cincy circle dirks', 'franchise']
+        ['romophobes', 'black levs matter']
+        ['garber', 'just a teaspoon']
+        ['gronk smash', 'marta bus']
+        ['hammerin hanks', 'mdirk doin work']
+
+10 :
+        ['natural', 'gronk smash']
+        ['cincy circle dirks', 'black levs matter']
+        ['romophobes', 'franchise']
+        ['garber', 'hammerin hanks']
+        ['just a teaspoon', "arthur's spooners"]
+        ['marta bus', 'mdirk doin work']
+
+11 :
+        ['garber', 'franchise']
+        ['gronk smash', 'just a teaspoon']
+        ["arthur's spooners", 'marta bus']
+        ['hammerin hanks', 'black levs matter']
+        ['natural', 'romophobes']
+        ['cincy circle dirks', 'mdirk doin work']
+
+12 :
+        ['just a teaspoon', 'mdirk doin work']
+        ['natural', 'cincy circle dirks']
+        ['romophobes', 'hammerin hanks']
+        ['garber', "arthur's spooners"]
+        ['franchise', 'black levs matter']
+        ['gronk smash', 'marta bus']
+
+garber :  11  -  ['marta bus', "arthur's spooners", 'natural', 'black levs matter', 'romophobes', 'gronk smash', 'hammerin hanks', 'mdirk doin work', 'cincy circle dirks', 'just a teaspoon', 'hammerin hanks', 'franchise', "arthur's spooners"]
+natural :  11  -  ['romophobes', 'hammerin hanks', 'garber', 'mdirk doin work', 'cincy circle dirks', 'marta bus', 'just a teaspoon', 'franchise', 'black levs matter', "arthur's spooners", 'gronk smash', 'romophobes', 'cincy circle dirks']
+mdirk doin work :  11  -  ["arthur's spooners", 'cincy circle dirks', 'romophobes', 'natural', 'black levs matter', 'franchise', 'black levs matter', 'garber', 'gronk smash', 'hammerin hanks', 'marta bus', 'cincy circle dirks', 'just a teaspoon']
+romophobes :  11  -  ['natural', 'gronk smash', 'mdirk doin work', 'cincy circle dirks', 'garber', 'just a teaspoon', "arthur's spooners", 'hammerin hanks', 'marta bus', 'black levs matter', 'franchise', 'natural', 'hammerin hanks']
+cincy circle dirks :  11  -  ['gronk smash', 'mdirk doin work', "arthur's spooners", 'romophobes', 'natural', 'hammerin hanks', 'marta bus', 'just a teaspoon', 'garber', 'franchise', 'black levs matter', 'mdirk doin work', 'natural']
+hammerin hanks :  11  -  ['franchise', 'natural', 'just a teaspoon', 'gronk smash', 'marta bus', 'cincy circle dirks', 'garber', 'romophobes', "arthur's spooners", 'mdirk doin work', 'garber', 'black levs matter', 'romophobes']
+gronk smash :  11  -  ['cincy circle dirks', 'romophobes', 'black levs matter', 'hammerin hanks', 'franchise', 'garber', 'franchise', "arthur's spooners", 'mdirk doin work', 'marta bus', 'natural', 'just a teaspoon', 'marta bus']
+franchise :  11  -  ['hammerin hanks', 'black levs matter', 'marta bus', "arthur's spooners", 'gronk smash', 'mdirk doin work', 'gronk smash', 'natural', 'just a teaspoon', 'cincy circle dirks', 'romophobes', 'garber', 'black levs matter']
+arthur's spooners :  11  -  ['mdirk doin work', 'garber', 'cincy circle dirks', 'franchise', 'just a teaspoon', 'black levs matter', 'romophobes', 'gronk smash', 'hammerin hanks', 'natural', 'just a teaspoon', 'marta bus', 'garber']
+black levs matter :  11  -  ['just a teaspoon', 'franchise', 'gronk smash', 'garber', 'mdirk doin work', "arthur's spooners", 'mdirk doin work', 'marta bus', 'natural', 'romophobes', 'cincy circle dirks', 'hammerin hanks', 'franchise']
+marta bus :  11  -  ['garber', 'just a teaspoon', 'franchise', 'just a teaspoon', 'hammerin hanks', 'natural', 'cincy circle dirks', 'black levs matter', 'romophobes', 'gronk smash', 'mdirk doin work', "arthur's spooners", 'gronk smash']
+just a teaspoon :  11  -  ['black levs matter', 'marta bus', 'hammerin hanks', 'marta bus', "arthur's spooners", 'romophobes', 'natural', 'cincy circle dirks', 'franchise', 'garber', "arthur's spooners", 'gronk smash', 'mdirk doin work']

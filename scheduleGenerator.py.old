@@ -1,0 +1,154 @@
+import random
+
+w1 = [['natural', 'kumarius'],
+["wayne", 'mdirk'],
+['garber', 'marta'],
+['franchise', 'hammerin hanks'],
+['kormanation', 'rdirk'],
+['grony', 'dillon']]
+
+r = [["natural", "rdirk"],
+["kumarius", "garber"],
+["franchise", "kormanation"],
+["grony", "wayne"],
+["marta", "hammerin hanks"],
+["dillon", "mdirk"]]
+
+weeks = 13
+schedule = [w1,r]
+
+allTeams = []
+remainingTeams = {}
+
+remainingTeamsThisWeek = []
+
+def MarkAsPlayed(team1, team2):
+    remainingTeams[team1].remove(team2)
+    remainingTeams[team2].remove(team1)
+    
+def AddAvailableTeams(numTimes):
+    for iTeam in range(0,len(allTeams)):
+        remainingTeams[allTeams[iTeam]] = []
+        
+        for j in range(0,len(allTeams)):
+            if (allTeams[j] != allTeams[iTeam]):
+                for k in range(0,numTimes):
+                    remainingTeams[allTeams[iTeam]].append(allTeams[j])
+
+if __name__=="__main__":
+    for iMatchup in range(0,len(r)):
+        allTeams.append(r[iMatchup][0])
+        allTeams.append(r[iMatchup][1])
+        
+    # for iTeam in range(0,len(allTeams)):
+        # remainingTeams[allTeams[iTeam]] = []
+        
+        # for j in range(0,len(allTeams)):
+            # if (allTeams[j] != allTeams[iTeam]):
+                # remainingTeams[allTeams[iTeam]].append(allTeams[j])
+    AddAvailableTeams(1)
+    
+    for iWeek in range(0,len(schedule)):
+        for iTeam in range(0,len(schedule[iWeek])):
+            MarkAsPlayed(schedule[iWeek][iTeam][0], schedule[iWeek][iTeam][1])
+        
+    print schedule
+    # print remainingTeams
+    
+    for iWeek in range(2,weeks): #0-12
+        print "\nWEEK:", iWeek
+        remainingTeamsThisWeek = allTeams[:]
+        schedule.append([])
+        tentativeWeekSchedule = []
+        
+        while len(remainingTeamsThisWeek) != 0:
+            name = remainingTeamsThisWeek[0]
+
+            if (len(remainingTeams[name]) != 0):
+                # we need to add all of the teams back
+                # print "adding back teams"
+                # AddAvailableTeams(1)
+            
+                # teamsAvailableToPlay = []
+                teamsAvailableToPlay = [team for team in remainingTeams[name] if team in remainingTeamsThisWeek]
+                # for team in remainingTeams[name]:
+                    # if team in remainingTeamsThisWeek:
+                        # teamsAvailableToPlay.append(team)
+
+                print remainingTeams[name]
+                print teamsAvailableToPlay
+                if len(teamsAvailableToPlay) != 0:
+                    iOpponent = random.randint(0,len(teamsAvailableToPlay)-1)
+                    opponent = teamsAvailableToPlay[iOpponent]
+                    
+                    schedule[iWeek].append([name, opponent])
+                    MarkAsPlayed(name, opponent)
+                    print name, opponent
+                    remainingTeamsThisWeek.remove(name)
+                    remainingTeamsThisWeek.remove(opponent)
+                else:
+                    remainingTeamsThisWeek = []
+            else:
+                remainingTeamsThisWeek.remove(name)
+            
+    #first loop schedules everyone out
+    #second loop fills in remaining schedule
+    AddAvailableTeams(1)
+    
+    for iWeek in range(0,weeks):
+        if (len(schedule[iWeek]) < 6):
+            remainingTeamsThisWeek = allTeams[:]
+            for matchup in schedule[iWeek]:
+                remainingTeamsThisWeek.remove(matchup[0])
+                remainingTeamsThisWeek.remove(matchup[1])
+            
+            while len(remainingTeamsThisWeek) != 0:
+                name = remainingTeamsThisWeek[0]
+                
+                teamsAvailableToPlay = [team for team in remainingTeams[name] if team in remainingTeamsThisWeek]
+                iOpponent = random.randint(0,len(teamsAvailableToPlay)-1)
+                opponent = teamsAvailableToPlay[iOpponent]
+                
+                schedule[iWeek].append([name, opponent])
+                MarkAsPlayed(name, opponent)
+                print name, opponent
+                remainingTeamsThisWeek.remove(name)
+                remainingTeamsThisWeek.remove(opponent)
+    
+    # switch rivalry week (week index 1) with its actual week
+    # (week 5 which is week index 4)
+    schedule[1], schedule[4] = schedule[4], schedule[1]
+    
+    teamSchedule = {}
+    for team in allTeams:
+        teamSchedule[team] = []
+            
+    # Now validate all schedules:
+    for iWeek in range(0,len(schedule)):
+        print iWeek, ":"
+        for matchup in schedule[iWeek]:
+            print "\t", matchup
+            teamSchedule[matchup[0]].append(matchup[1])
+            teamSchedule[matchup[1]].append(matchup[0])
+            if (matchup[0] == matchup[1]):
+                print "playing yourself"
+                raise Exception
+        print ""
+        
+    for team in teamSchedule:
+        numUniqueTeams = len(set(teamSchedule[team]))
+        print team, ": ", numUniqueTeams, " - ", teamSchedule[team]
+        
+        if numUniqueTeams != 11:
+            print "someone not playing everyone"
+            raise Exception
+        
+        for opponent in teamSchedule[team]:
+            if teamSchedule[team].count(opponent) > 2:
+                print "someone playing someone more than twice"
+                raise Exception
+           
+        for iOpponent in range(1,len(teamSchedule[team])):
+            if teamSchedule[team][iOpponent-1] == teamSchedule[team][iOpponent]:
+                print "back to back weeks against opponent"
+                raise Exception
