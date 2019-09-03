@@ -1,0 +1,2 @@
+# ScheduleGenerator
+Generates schedules
