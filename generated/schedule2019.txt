@@ -1,4 +1,5 @@
 ('tries:', 710)
+
 Week 1
 'natural', '@', 'franchise')
 'kormanation', '@', 'dillon')
