@@ -1,11 +1,10 @@
 import random
 
-divisions = [['natural', 'hanks', 'tyler'],
-['garber', 'kumarius', 'eckmanity'],
-['rdirk', 'kormanation', 'franchise'],
-['marta', 'dillon', 'grony']]
+divisions = [['natural', 'hanks', 'tyler', 'kumarius'],
+['garber', 'eckmanity', 'grony', 'dillon'],
+['rdirk', 'kormanation', 'franchise', 'marta']]
 
-weeks = 13
+weeks = 14
 schedule = []
 
 allGames = []
@@ -103,7 +102,7 @@ def scheduleGamesFromList(games):
     gamesToSchedule = [g for g in games]
     removeScheduledGamesFromGameList(gamesToSchedule)
 
-    scheduleOrder = [3,4,5,10,11,12,0,1,2,6,7,8,9]
+    scheduleOrder = [2,3,4,11,12,13,0,1,5,6,7,8,9,10]
     iWeek = 0
     while (iWeek < weeks):
         while (len(schedule[scheduleOrder[iWeek]]) < 6):
@@ -135,28 +134,46 @@ def scheduleDivisionOnlyGames():
 
         thisGames = []
 
-        thisGames.append([randomOrderDivision[0], randomOrderDivision[1]])
-        thisGames.append([randomOrderDivision[1], randomOrderDivision[2]])
-        thisGames.append([randomOrderDivision[2], randomOrderDivision[0]])
+        # week 3
+        thisGames.append(random.sample([randomOrderDivision[0], randomOrderDivision[1]], 2))
+        thisGames.append(random.sample([randomOrderDivision[2], randomOrderDivision[3]], 2))
+        # week 4
+        thisGames.append(random.sample([randomOrderDivision[0], randomOrderDivision[2]], 2))
+        thisGames.append(random.sample([randomOrderDivision[1], randomOrderDivision[3]], 2))
+        # week 5
+        thisGames.append(random.sample([randomOrderDivision[0], randomOrderDivision[3]], 2))
+        thisGames.append(random.sample([randomOrderDivision[1], randomOrderDivision[2]], 2))
 
         random.shuffle(randomOrderDivision)
 
+        # week 12
         thisGames.append([randomOrderDivision[0], randomOrderDivision[1]])
+        thisGames.append([randomOrderDivision[2], randomOrderDivision[3]])
+        # week 13
+        thisGames.append([randomOrderDivision[0], randomOrderDivision[2]])
+        thisGames.append([randomOrderDivision[1], randomOrderDivision[3]])
+        # week 14
+        thisGames.append([randomOrderDivision[0], randomOrderDivision[3]])
         thisGames.append([randomOrderDivision[1], randomOrderDivision[2]])
-        thisGames.append([randomOrderDivision[2], randomOrderDivision[0]])
 
-        for i in [0,1,2]:
-            for j in [3,4,5]:
+        for i in range(0, 6):
+            for j in range(6, 12):
                 if areGamesEqual(thisGames[i], thisGames[j]):
                     if getHomeTeam(thisGames[i]) == getHomeTeam(thisGames[j]):
                         thisGames[j].reverse()
 
-        scheduleGame(3, thisGames[0])
-        scheduleGame(4, thisGames[1])
-        scheduleGame(5, thisGames[2])
-        scheduleGame(10, thisGames[3])
-        scheduleGame(11, thisGames[4])
-        scheduleGame(12, thisGames[5])
+        scheduleGame(2, thisGames[0])
+        scheduleGame(2, thisGames[1])
+        scheduleGame(3, thisGames[2])
+        scheduleGame(3, thisGames[3])
+        scheduleGame(4, thisGames[4])
+        scheduleGame(4, thisGames[5])
+        scheduleGame(11, thisGames[6])
+        scheduleGame(11, thisGames[7])
+        scheduleGame(12, thisGames[8])
+        scheduleGame(12, thisGames[9])
+        scheduleGame(13, thisGames[10])
+        scheduleGame(13, thisGames[11])
 
 def removeScheduledGamesFromGameList(games):
     for week in schedule:
