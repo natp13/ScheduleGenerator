@@ -1,8 +1,8 @@
 import random
 
-divisions = [['natural', 'hanks', 'tyler', 'kumarius'],
-['garber', 'eckmanity', 'grony', 'dillon'],
-['rdirk', 'kormanation', 'franchise', 'marta']]
+divisions = [['natural', 'hanks', 'tyler', 'marta'],
+['kumar', 'kormanation', 'franchise', 'garber'],
+['rdirk', 'eckmanity', 'dillon', 'grony']]
 
 weeks = 14
 schedule = []
